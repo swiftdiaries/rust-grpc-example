@@ -67,12 +67,12 @@ Add tonic related dependencies to the project.
 
 ```toml
 [dependencies]
-tonic = "0.3"
-prost = "0.6"
-tokio = { version = "0.2", features = ["macros"] }
+tonic = "0.7"
+prost = "0.10.1"
+tokio = { version = "1.18", features = ["macros", "rt-multi-thread"] }
 
 [build-dependencies]
-tonic-build = "0.3"
+tonic-build = "0.7"
 ```
 
 The `tonic-build` crate is built on top of the `prost-build` crate that we used in our last blog post. Check out the [`tonic-build` docs](https://docs.rs/tonic-build/0.3.1/tonic_build/) for more configuration options while generating service definitions.
